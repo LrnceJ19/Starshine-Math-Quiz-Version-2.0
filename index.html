@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Starshine Math Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="img/jpeg" href="image/logo.jpeg">
+  </head>
+  <body>
+      <div id="anchor">
+        <div id="bodyWrapper">
+          <div id="fallingStarContainer">
+            <div><span id="star1">&#10022;</span></div>
+            <div><span id="star2">&#10022;</span></div>
+            <div><span id="star3">&#10022;</span></div>
+            <div><span id="star4">&#10022;</span></div>
+            <div><span id="star5">&#10022;</span></div>
+            <div><span id="star6">&#10022;</span></div>
+            <div><span id="star7">&#10022;</span></div>
+            <div><span id="star8">&#10022;</span></div>
+            <div><span id="star9">&#10022;</span></div>
+            <div><span id="star10">&#10022;</span></div>
+            <div><span id="star11">&#10022;</span></div>
+            <div><span id="star12">&#10022;</span></div>
+            <div><span id="star13">&#10022;</span></div>
+            <div><span id="star14">&#10022;</span></div>
+            <div><span id="star15">&#10022;</span></div>
+            <div><span id="star16">&#10022;</span></div>
+            <div><span id="star17">&#10022;</span></div>
+            <div><span id="star18">&#10022;</span></div>
+            <div><span id="star19">&#10022;</span></div>
+            <div><span id="star20">&#10022;</span></div>
+          </div>
+        <!-- log in menu -->
+        <div class="mainPanel" id="loginMenu" style="display: nones">
+          <div class="titleBox">
+            <h1 class="gameName">Starshine Math Quiz</h1>
+            <p class="subText">Starshine uses Math Quizzes to help your mind reach the stars, and make your brilliance shine like the brightest star.</p>
+          </div>
+          <div class="glass hoverable highlight" id="loginPanel" style="animation: fadeSlideDown 3s ease forwards">
+            <h2 class="headText">Log In</h2>
+            <div id="infoContainer">
+              <div>
+                <label for="username">Username</label>
+                <input class="hoverable highlight" type="text" id="username" placeholder="Enter username">
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <div id="passContainer1">
+                  <input class="hoverable highlight" type="password" id="password" placeholder="Enter password">
+                  <i class="fa-solid fa-eye togglePass" id="hidePass1"></i>
+                  <i class="fa-solid fa-eye-slash togglePass" id="showPass1"></i>
+                </div>
+                <div id="forgotPassContainer">
+                  <p class="textHoverable" id="forgotPass">Forgot password?</p>
+                </div>
+              </div>
+              <div id="submitContainer">
+                <button class="hoverable highlight tap" id="signinBtn">Sign In
+                </button>
+                <p id="registerText">Don't have an account? <span class="textHoverable" id="registerBtn">Register here.</span></p>
+              </div>
+            </div>
+            <div class="messageBox hoverable highlight" id="msgBox1">
+              <i class="fa-solid fa-circle-exclamation"></i><p id="msgTxt1"></p>
+            </div>
+          </div>
+          
+          <!-- sign up panel -->
+          <div class="glass hoverable highlight" id="signupPanel">
+            <h2 class="headText">Sign Up</h2>
+            <div id="signupContainer">
+              <div>
+                <label for="newUsername">Username</label>
+                <input class="hoverable highlight" type="text" id="newUsername" placeholder="Enter username">
+              </div>
+              <div>
+                <label for="newPassword">Password</label>
+                <div id="passContainer2">
+                  <input class="hoverable highlight" type="password" id="newPassword" placeholder="Enter password">
+                  <i class="fa-solid fa-eye togglePass" id="hidePass2"></i>
+                  <i class="fa-solid fa-eye-slash togglePass" id="showPass2"></i>
+                </div>
+              </div>
+              <div>
+                <input class="hoverable highlight" type="password" id="confirmPassword" placeholder="Confirm password">
+              </div>
+            </div>
+            <div class="btnContainer">
+              <button class="hoverable tap highlight" id="cancelBtn1">
+                Cancel
+              </button>
+              <button class="hoverable tap highlight" id="submitBtn">Submit
+              </button>
+            </div>
+            <div class="messageBox hoverable highlight" id="msgBox2">
+              <i class="fa-solid fa-circle-exclamation"></i><p id="msgTxt2"></p>
+            </div>
+          </div>
+          
+          <!-- forgot password -->
+          <div class="glass hoverable highlight" id="forgotPassPanel">
+            <h2 class="headText">Forgot password?</h2>
+            <div id="forgotPasswordContainer">
+              <div>
+                <label for="fUsername">Username</label>
+                <input class="hoverable highlight" type="text" id="fUsername" placeholder="Enter username">
+              </div>
+              <div>
+                <label for="nPassword">Enter new password</label>
+                <div id="passContainer3">
+                  <input class="hoverable highlight"type="password" id="nPassword" placeholder="Enter new password">
+                    <i class="fa-solid fa-eye togglePass" id="hidePass3"></i>
+                    <i class="fa-solid fa-eye-slash togglePass" id="showPass3"></i>
+                </div>
+              </div>
+              <div>
+                <input class="hoverable highlight" type="password" id="cPasssord" placeholder="Confirm password">
+              </div>
+            </div>
+            <div class="btnContainer">
+              <button class="hoverable tap highlight" id="cancelBtn2"> Cancel
+              </button>
+              <button class="hoverable tap highlight" id="confirmBtn">Confirm
+              </button>
+            </div>
+            <div class="messageBox hoverable highlight" id="msgBox3">
+              <i class="fa-solid fa-circle-exclamation"></i><p id="msgTxt3"></p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- home menu & navigation -->
+        <div class="mainPanel" id="homeMenu" style="display: none">
+          <div id="homeNav" style="display: none">
+            <div class="titleBox">
+              <h1 class="gameName">Starshine Math Quiz</h1>
+              <div>
+                <p class="subText">Welcome, <b class="user" id="userText"></b>!</p><i class="fa-solid fa-pen-to-square" id="editProfile"></i>
+              </div>
+            </div>
+            <div id="miscBox">
+              <div class="gotoBtn glass hoverable highlight clickable" id="logoutBtn"><i class="fa-solid fa-power-off"></i></div>
+              <div class="starCresct hoverable" style="opacity: 0; pointer-events: none">
+                <i class="fa-solid fa-star-and-crescent"></i>
+                <span class="starCresctAmount">1000</span>
+              </div>
+              <div class="gotoBtn glass hoverable highlight clickable" id="creatorsBtn"><i class="fa-solid fa-people-group"></i></div>
+            </div>
+            <div id="gameNav">
+              <div style="grid-area: play"><div class="navBtn glass beating clickable highlight" id="playBtn">
+                <i class="fa-solid fa-play"></i>
+                <h2>Play</h2>
+              </div></div>
+              <div style="grid-area: stats"><div class="navBtn glass hoverable clickable highlight" style="opacity: 0; pointer-events: none">
+                <i class="fa-solid fa-chart-simple"></i>
+                <h2>Stats</h2>
+              </div></div>
+              <div style="grid-area: leaderboards"><div class="navBtn glass hoverable clickable highlight" style="opacity: 0; pointer-events: none">
+                <i class="fa-solid fa-trophy"></i>
+                <h2>Leaderboard</h2>
+              </div></div>
+            </div>
+          </div>
+          
+          <!-- difficulty selection -->
+          <div  id="diffNav" style="display: none">
+            <h1 class="glowing">SELECT DIFFICULTY</h1>
+            <div id="diffNavMenuWrapper">
+              <div class="gotoBtn hoverable glass highlight clickable" id="backBtn1"><i class="fa-solid fa-arrow-right-to-bracket"></i></div>
+              <div class="starCresct hoverable" style="opacity: 0; pointer-events: none;">
+                <i class="fa-solid fa-star-and-crescent"></i>
+                <span class="starCresctAmount">1000</span>
+              </div>
+              <div class="gotoBtn glass hoverable clickable highlight"><i class="fa-solid fa-circle-question"></i></div>
+            </div>
+            <div id="difficultySelection">
+              <div class="diffBtn glass clickable hoverable highlight" id="easyBtn">
+                <div><i class="fa-solid fa-star"></i></div>
+                <h2>EASY</h2>
+              </div>
+              <div class="diffBtn glass hoverable clickable highlight" id="mediumBtn">
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h2>MEDIUM</h2>
+              </div>
+              <div class="diffBtn glass hoverable clickable highlight" id="hardBtn">
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h2>HARD</h2>
+              </div>
+            </div>
+          </div>
+          
+          <!-- countdown -->
+          <div id="countdownContainer" style="display: none">
+            <h1 id="readyText">READY</h1>
+            <h1 id="setText" style="display: none">SET</h1>
+            <h1 id="solveText" style="display: none">SOLVE!</h1>
+          </div>
+          
+          <!-- game interface -->
+          <div id="gameInterface" style="display: none">
+            <h1 class="glowing" id="difficultyText"></h1>
+            <div id="infoBox" class="glass hoverable highlight">
+              <h2 class="user" id="uTxt"></h2>
+              <div id="statBox">
+                <div><i class="fa-solid fa-check"></i><h3 id="checkCount">0</h3></div>
+                <div><i class="fa-solid fa-x"></i><h3 id="wrongCount">0</h3></div>
+                <div><i class="fa-solid fa-bullseye"></i><h3 id="accuracyPercent">0%</h3></div>
+              </div>
+            </div>
+            <h3 id="questionCount">Question <span id="qCount">0</span>/10</h3>
+            <div class="glass hoverable highlight" id="questionContainer">
+              <div id="score"><h3>SCORE <span id="scoreCount">0</span></h3></div>
+              <div id="question">
+                <span style="grid-area: num1" id="num1"></span>
+                <span style="grid-area: arithmetic" id="arithmetic">&nbsp;<span id="sign"></span>&nbsp;</span>
+                <span style="grid-area: num2" id="num2"> </span>
+              </div>
+              <div id="forfeit" style="display: none">
+                <i class="fa-solid fa-flag"></i>
+                <h4>Surrender?</h4>
+              </div>
+            </div>
+            <div class="hoverable" id="timerContainer">
+              <i class="fa-solid fa-hourglass-half" id="timerIcon"></i>
+              <div id="timerBar">
+                <div id="timeVolume"></div>
+              </div>
+              <h3 id="timerCount"><span>0s</span></h3>
+            </div>
+            <div id="choicesContainer">
+              <div class="glass hoverable highlight clickable choice" id="choice1">
+                <h2 id="cText1"></h2>
+              </div>
+              <div class="glass hoverable highlight clickable choice" id="choice2">
+                <h2 id="cText2"></h2>
+              </div>
+              <div class="glass hoverable highlight clickable choice" id="choice3">
+                <h2 id="cText3"></h2>
+              </div>
+              <div class="glass hoverable highlight clickable choice" id="choice4">
+                <h2 id="cText4"></h2>
+              </div>
+            </div>
+          </div>
+          
+          <!-- dashboard -->
+          <div id="dashboardInterface" style="display: none">
+          <h1 class="glowing" id="diffText"></h1>
+          <div class="glass hoverable highlight" id="dbContent">
+            <h2 id="uName"></h2>
+            <div>
+              <h3 id="scoreText">SCORE: <span id="sText">0</span></h3>
+            </div>
+            <div id="statistics">
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <h3 id="checks"></h3>
+              </div>
+              <div>
+              <i class="fa-solid fa-x"></i>
+              <h3 id="wrongs"></h3>
+              </div>
+              <div>
+                <i class="fa-solid fa-bullseye"></i>
+                <h3 id="acc">0.00%</h3>
+              </div>
+            </div>
+          </div>
+          
+          <div id="playAgain">
+            <h2 class="glass hoverable highlight" id="backToMenuBtn">BACK TO MENU</h2>
+             <h2 class="glass hoverable highlight" id="playagainBtn" style="opacity: 0; pointer-events: none; display: none"
+            >PLAY AGAIN</h2>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/082c91d8b7.js" crossorigin="anonymous"></script>
+    <script type="module" src="javascript/script.js"></script>
+  </body>
+</html>
