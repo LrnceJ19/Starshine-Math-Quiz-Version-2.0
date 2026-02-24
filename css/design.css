@@ -1,0 +1,78 @@
+.glass{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  border-radius: 2rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.25);
+}
+.hoverable{
+  transition: transform 0.2s ease;
+}
+
+/* interactions */
+.hoverable:hover{
+  transform: scale(1.1);
+}
+.highlight:hover{
+  box-shadow: 0px 0px 0.5rem var(--sw);
+}
+.glass.clickable:active{
+  background: rgba(255, 255, 255, 0.2);
+}
+.tap:active{
+  font-weight: bold;
+}
+.textHoverable:hover{
+  text-decoration: underline;
+}
+.textHoverable:active{
+  background: rgba(255, 255, 255, 0.15);
+}
+.beating{
+  animation: beat 1s linear infinite;
+}
+.beating:hover{
+  box-shadow: 0px 0px 0.5rem var(--sw);
+}
+.glowing{
+  color: white;
+  animation: glow 5s linear infinite;
+  text-align: center;
+}
+
+/* elements */
+.mainPanel{
+  width: min(768px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.titleBox{
+  min-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.subText{
+  color: var(--muted);
+  font-size: 1rem;
+}
+.gameName{
+  font-size: 3rem;
+  display: block;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  
+  animation: glow 5s linear infinite;
+}
+.headText{
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}

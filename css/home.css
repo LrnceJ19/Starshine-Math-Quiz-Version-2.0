@@ -1,0 +1,139 @@
+/* home menu */
+#homeNav, #diffNav{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 100%;
+  align-items: center;
+}
+#homeNav .titleBox div{
+  display: flex;
+  justify-content: center;
+}
+#homeNav .titleBox div i{
+  color: var(--muted);
+}
+#homeNav .subText, #editProfile{
+  font-size: 1.5rem;
+}
+
+/* logout, starshards, creators tab */
+#miscBox, #diffNavMenuWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(500px, 100%);
+}
+#miscBox i, #diffNavMenuWrapper i{
+  color: white;
+  font-size: 1.5rem;
+}
+#miscBox .starCresct, .starCresct{
+  display: flex;
+  align-items: center;
+}
+.starCresct i{
+  font-size: 2rem !important;
+  color: white !important;
+}
+.starCresctAmount{
+  font-size: 1.5rem !important;
+  color: var(--sw) !important;
+}
+.gotoBtn{
+  width: min(75px, 100%);
+  padding: 0.5rem;
+  text-align: center;
+}
+.gotoBtn:active i{
+  color: var(--grey) !important;
+}
+
+/* game navigation */
+#gameNav{
+  display: grid;
+  min-width: 100%;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-template-areas:
+  "play"
+  "stats"
+  "leaderboards";
+}
+#gameNav > div{
+  align-content: center;
+}
+.navBtn{
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.navBtn i{
+  font-size: 3rem;
+  color: white;
+}
+.navBtn h2{
+  color: white;
+}
+.navBtn:active i, .navBtn:active h2, .diffBtn:active i, .diffBtn:active h2{
+  color: var(--grey);
+}
+
+/* diff navigation */
+#difficultySelection{
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-template-areas: 
+  "easy"
+  "medium"
+  "hard";
+}
+.diffBtn{
+  padding: 2.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.diffBtn i{
+  color: white;
+  font-size: 2.5rem;
+}
+.diffBtn h2{
+  color: white;
+}
+
+/* countdown */
+#countdownContainer{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 25vh;
+}
+#countdownContainer h1{
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+}
+
+@media(min-width: 768px){
+  #gameNav{
+    grid-template-columns: 0.95fr 1.1fr 0.95fr;
+    grid-template-areas:
+    "stats play leaderboards";
+  }
+  #playBtn{
+    height: 200px;
+  }
+  #difficultySelection{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

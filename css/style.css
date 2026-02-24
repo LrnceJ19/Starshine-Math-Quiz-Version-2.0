@@ -1,0 +1,295 @@
+@import "animation.css";
+@import "design.css";
+@import "login.css";
+@import "home.css";
+@import "game.css";
+
+:root{
+--sw: rgba(255, 255, 255, 0.75);
+--grey: rgba(200, 200, 200, 0.75);
+--muted: rgba(150, 170, 200, 0.75);
+--dim: rgba(140, 140, 140, 0.75);
+--empty: rgba(200, 200, 200, 0.05);
+--accent: rgba(120, 180, 255, 0.75);
+--green: rgba(0, 255, 0, 0.75);
+--red: rgba(255, 0, 0, 0.75);
+--pink: rgba(255, 200, 200, 0.75);
+--gg: rgba(0, 255, 0, 0.25);
+--gr: rgba(255, 0, 0, 0.25);
+}
+
+/* html */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+html, body{
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 32, 39, 1),
+    rgba(26, 26, 46, 1),
+    rgba(10, 10, 10, 1),
+    rgba(0, 0, 0, 1)
+  )
+}
+p, h1, h2, h3, h4, h5{
+  cursor: default;
+}
+
+/* layout */
+#bodyWrapper{
+  min-width: 100vw;
+  min-height: 100vh;
+}
+#anchor{
+  margin: 0 auto;
+  position: relative
+}
+
+/* don't display at start */
+#signupPanel, #forgotPassPanel{
+  display: none;
+}
+
+/* background animation */
+#fallingStarContainer{
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  animation: glow 5s linear infinite;
+}
+#fallingStarContainer div{
+  display: flex;
+  justify-content: center;
+}
+#fallingStarContainer div:nth-child(1){
+  transform: translateY(7vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(2){
+  transform: translateY(4vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(3){
+  transform: translateY(9vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(4){
+  transform: translateY(6vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(5){
+  transform: translateY(3vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(6){
+  transform: translateY(8vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(7){
+  transform: translateY(5vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(8){
+  transform: translateY(2vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(9){
+  transform: translateY(10vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(10){
+  transform: translateY(6vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(11){
+  transform: translateY(3vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(22){
+  transform: translateY(8vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(13){
+  transform: translateY(5vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(14){
+  transform: translateY(9vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(15){
+  transform: translateY(4vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(16){
+  transform: translateY(7vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(17){
+  transform: translateY(2vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(18){
+  transform: translateY(10vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(19){
+  transform: translateY(6vh);
+  height: 100vh;
+  position: relative;
+}
+#fallingStarContainer div:nth-child(20){
+  transform: translateY(8vh);
+  height: 100vh;
+  position: relative;
+}
+#star1{
+  position: absolute;
+  opacity: 0;
+  animation: fall 14s linear infinite;
+  animation-delay: 0s;
+}
+#star2{
+  position: absolute;
+  opacity: 0;
+  animation: fall 8s linear infinite;
+  animation-delay: 2s;
+}
+#star3{
+  position: absolute;
+  opacity: 0;
+  animation: fall 6s linear infinite;
+  animation-delay: 4s;
+}
+#star4{
+  position: absolute;
+  opacity: 0;
+  animation: fall 12s linear infinite;
+  animation-delay: 1s;
+}
+#star5{
+  position: absolute;
+  opacity: 0;
+  animation: fall 5s linear infinite;
+  animation-delay: 3s;
+}
+#star6{
+  position: absolute;
+  opacity: 0;
+  animation: fall 9s linear infinite;
+  animation-delay: 5s;
+}
+#star7{
+  position: absolute;
+  opacity: 0;
+  animation: fall 11s linear infinite;
+  animation-delay: 2s;
+}
+#star8{
+  position: absolute;
+  opacity: 0;
+  animation: fall 7s linear infinite;
+  animation-delay: 0s;
+}
+#star9{
+  position: absolute;
+  opacity: 0;
+  animation: fall 13s linear infinite;
+  animation-delay: 4s;
+}
+#star10{
+  position: absolute;
+  opacity: 0;
+  animation: fall 10s linear infinite;
+  animation-delay: 1s;
+}
+#star11{
+  position: absolute;
+  opacity: 0;
+  animation: fall 6s linear infinite;
+  animation-delay: 3s;
+}
+#star12{
+  position: absolute;
+  opacity: 0;
+  animation: fall 15s linear infinite;
+  animation-delay: 5s;
+}
+#star13{
+  position: absolute;
+  opacity: 0;
+  animation: fall 8s linear infinite;
+  animation-delay: 0s;
+}
+#star14{
+  position: absolute;
+  opacity: 0;
+  animation: fall 12s linear infinite;
+  animation-delay: 2s;
+}
+#star15{
+  position: absolute;
+  opacity: 0;
+  animation: fall 9s linear infinite;
+  animation-delay: 4s;
+}
+#star16{
+  position: absolute;
+  opacity: 0;
+  animation: fall 14s linear infinite;
+  animation-delay: 1s;
+}
+#star17{
+  opacity: 0;
+  position: absolute;
+  animation: fall 7s linear infinite;
+  animation-delay: 3s;
+}
+#star18{
+  position: absolute;
+  opacity: 0;
+  animation: fall 11s linear infinite;
+  animation-delay: 5s;
+}
+#star19{
+  position: absolute;
+  opacity: 0;
+  animation: fall 5s linear infinite;
+  animation-delay: 2s;
+}
+#star20{
+  position: absolute;
+  opacity: 0;
+  animation: fall 13s linear infinite;
+  animation-delay: 0s;
+}
